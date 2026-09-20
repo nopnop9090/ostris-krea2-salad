@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!Dockerfile.bake
+!entrypoint.sh
+!download-krea2.sh
+!.dockerignore

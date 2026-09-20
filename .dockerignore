@@ -1,6 +1,6 @@
 *
 !Dockerfile
-!Dockerfile.bake
 !entrypoint.sh
 !download-krea2.sh
+!download-qwen-vl.sh
 !.dockerignore

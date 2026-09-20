@@ -11,7 +11,7 @@ FROM ostris/aitoolkit:latest
 USER root
 WORKDIR /app
 
-RUN pip install --no-cache-dir -U "huggingface_hub[hf_transfer]" hf_transfer \
+RUN pip install --break-system-packages --no-cache-dir -U "huggingface_hub[hf_transfer]" hf_transfer \
     && mkdir -p /models /root/workspace
 
 COPY download-krea2.sh /usr/local/bin/download-krea2.sh

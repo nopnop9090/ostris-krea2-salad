@@ -11,6 +11,11 @@ fi
 # Always ensure Krea-2-Raw is on disk before UI (skip if already present)
  /usr/local/bin/download-krea2.sh
 
+# Optional (later): captioning weights — enable with PRELOAD_QWEN_VL=1
+if [[ "${PRELOAD_QWEN_VL:-0}" == "1" ]]; then
+  /usr/local/bin/download-qwen-vl.sh || echo "Qwen VL download failed (continuing)" >&2
+fi
+
 # Convenience paths for Ostris configs / UI
 mkdir -p /app/ai-toolkit/models 2>/dev/null || true
 ln -sfn "${KREA2_DIR}" /app/ai-toolkit/models/Krea-2-Raw

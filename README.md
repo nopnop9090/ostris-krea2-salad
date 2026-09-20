@@ -16,6 +16,11 @@ Not the official Salad Flux/Kelpie recipe. Base image: [`ostris/aitoolkit`](http
 | `AI_TOOLKIT_AUTH` | recommended | UI password |
 | `KREA2_REPO` | no | `krea/Krea-2-Raw` |
 | `KREA2_DIR` | no | `/models/Krea-2-Raw` |
+| `PRELOAD_QWEN_VL` | no | `0` (set `1` later for captioning) |
+| `QWEN_VL_REPO` | no | `Qwen/Qwen3-VL-8B-Instruct` |
+| `QWEN_VL_DIR` | no | `/models/Qwen3-VL-8B-Instruct` |
+
+Later: set `PRELOAD_QWEN_VL=1` so captioning weights are fetched before UI start (needs enough disk).
 
 ## Deploy notes
 
